@@ -1,12 +1,38 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import GintoNordBlack from '../src/assets/fonts/ginto-nord-black.otf';
+import GintoNord from '../src/assets/fonts/ginto-nord-regular.ttf';
+import WhitneyLight from '../src/assets/fonts/whitney-light.otf';
+import WhitneyMedium from '../src/assets/fonts/whitney-medium.otf';
 
 export const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-family: "Whitney Light";
+    src: url(${WhitneyLight});
+  }
+  @font-face {
+    font-family: "Whitney Medium";
+    src: url(${WhitneyMedium});
+  }
+  @font-face {
+    font-family: "Ginto Nord";
+    src: url(${GintoNord});
+  }
+  @font-face {
+    font-family: "Ginto Nord Black";
+    src: url(${GintoNordBlack});
+  }
+  
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Whitney Light", sans-serif;
 }
 
 html, body {
@@ -22,13 +48,13 @@ html, body {
 input,
 button,
 textarea {
-  outline: none;
   border: 1px solid gray;
 }
 
 a, button {
   -webkit-tap-highlight-color: none;
   box-shadow: none;
+  cursor: pointer;
 }
 
 a {
@@ -41,13 +67,11 @@ ul {
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  width: max(100%, 330px);
   height: 100%;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.colors.text};
   background-color: ${(props) => props.theme.colors.background};
   overflow-y: hidden;
 `;

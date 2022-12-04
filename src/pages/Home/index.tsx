@@ -1,10 +1,10 @@
-import { LogoSvg } from '~/assets';
+import { Header } from '~/components/Header';
 import { HomeContainer } from './styles';
 
 export function Home() {
   return (
     <HomeContainer>
-      <LogoSvg />
+      <Header />
     </HomeContainer>
   );
 }
