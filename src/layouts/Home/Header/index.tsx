@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AngleRightSvg, CloseSvg, DownloadSvg, HamburgerSvg, LogoSvg } from '~/assets';
-import { Trigger } from '../Trigger';
+import { Trigger } from '../../../components/Trigger';
 import { AcademyLinks, SecurityLinks } from './data';
 import {
   DesktopMenu,
@@ -15,7 +15,7 @@ import {
   StyledHeader,
 } from './styles';
 
-export function Header() {
+export function HomeHeader() {
   const generalMenuRef = useRef<HTMLDivElement>(null);
   const securityMenuRef = useRef<HTMLDivElement>(null);
   const academyMenuRef = useRef<HTMLDivElement>(null);
@@ -24,6 +24,9 @@ export function Header() {
   const [academySlide, setAcademySlide] = useState(false);
 
   const handleOpen = (menu: 'general' | 'security' | 'academy') => {
+    const html = document.getElementsByTagName('html')[0]!;
+    html.style.overflow = 'hidden';
+
     if (menu === 'general') {
       generalMenuRef.current!.style.display = 'flex';
       setTimeout(() => setGeneralSlide(true));
@@ -54,6 +57,9 @@ export function Header() {
   };
 
   const handleClose = () => {
+    const html = document.getElementsByTagName('html')[0]!;
+    html.style.overflowY = 'scroll';
+
     generalMenuRef.current!.style.display = 'none';
     securityMenuRef.current!.style.display = 'none';
     academyMenuRef.current!.style.display = 'none';

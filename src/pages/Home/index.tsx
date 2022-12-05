@@ -1,10 +1,16 @@
-import { Header } from '~/components/Header';
-import { HomeContainer } from './styles';
+import { BackgroundSvg } from '~/assets';
+import { HomeHeader } from '~/layouts/Home/Header';
+import { HomeHero } from '~/layouts/Home/Hero';
+import { FullHomeContainer, HomeContainer } from './styles';
 
 export function Home() {
   return (
-    <HomeContainer>
-      <Header />
-    </HomeContainer>
+    <FullHomeContainer>
+      <BackgroundSvg className='home-bg' />
+      <HomeContainer>
+        <HomeHeader />
+        <HomeHero />
+      </HomeContainer>
+    </FullHomeContainer>
   );
 }

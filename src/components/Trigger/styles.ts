@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const StyledButton = styled.button<Props>`
-  width: ${(props) => props.width ?? '150px'};
+  width: ${(props) => props.width ?? 'max-content'};
   height: ${(props) => props.height ?? '38px'};
   margin: ${(props) => props.margin ?? '0'};
   padding: ${(props) => props.padding ?? '0'};
@@ -27,6 +27,7 @@ export const StyledButton = styled.button<Props>`
   gap: 8px;
   border: none;
   border-radius: 40px;
+  line-height: 24px;
 `;
 
 export const StyledLink = styled(Link)<Props>`
@@ -44,4 +45,5 @@ export const StyledLink = styled(Link)<Props>`
   gap: 8px;
   border: none;
   border-radius: 40px;
+  line-height: 24px;
 `;

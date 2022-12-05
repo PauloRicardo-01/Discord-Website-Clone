@@ -13,7 +13,11 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (min-width: 1024px) {
+  svg {
+    color: ${(props) => props.theme.colors.white};
+  }
+
+  @media screen and (min-width: 768px) {
     padding: 0 40px;
   }
 `;
@@ -79,6 +83,7 @@ export const MobileMenuOverlay = styled.div`
   display: none;
   justify-content: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 
   @media screen and (min-width: 1024px) {
     display: none;
@@ -97,6 +102,7 @@ export const MobileMenu = styled.div<Props>`
   border-bottom-left-radius: 8px;
   overflow-y: scroll;
   transition: 0.2s;
+  z-index: 1000;
 
   @media screen and (min-width: 1024px) {
     display: none;
@@ -109,6 +115,7 @@ export const MobileMenuContent = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 
   a {
     width: 124px;
