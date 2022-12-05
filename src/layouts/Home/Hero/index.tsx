@@ -1,4 +1,4 @@
-import { DownloadSvg, ForegroundSvg1, ForegroundSvg2 } from '~/assets';
+import { DownloadSvg, ForegroundSvg1 } from '~/assets';
 import { Trigger } from '~/components/Trigger';
 import { HomeHeroButtons, HomeHeroContainer, HomeHeroContent } from './styles';
 
@@ -20,7 +20,6 @@ export function HomeHero() {
         </HomeHeroButtons>
       </HomeHeroContent>
       <ForegroundSvg1 className='relative-foreground-1' />
-      <ForegroundSvg2 className='relative-foreground-2' />
     </HomeHeroContainer>
   );
 }

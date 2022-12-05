@@ -5,25 +5,16 @@ export const HomeHeroContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  svg {
+  .relative-foreground-1 {
     width: 100%;
     max-width: 880px;
     height: max-content;
     margin-left: -80px;
   }
 
-  .relative-foreground-2 {
-    display: none;
-  }
-
   @media screen and (min-width: 768px) {
     .relative-foreground-1 {
       display: none;
-    }
-
-    .relative-foreground-2 {
-      margin-top: -150px;
-      display: flex;
     }
   }
 
@@ -47,19 +38,20 @@ export const HomeHeroContent = styled.div`
     line-height: 95%;
     text-transform: uppercase;
     text-rendering: geometricPrecision;
+    margin-bottom: 24px;
   }
 
   div {
-    margin-top: 24px;
     color: ${(props) => props.theme.colors.white};
     font-size: clamp(16px, 2vw, 20px);
     line-height: 1.625;
   }
 
   @media screen and (min-width: 768px) {
-    padding: 80px 40px;
+    padding: 80px 40px 156px;
 
     h1 {
+      margin-bottom: 40px;
       width: 412px;
       font-size: 56px;
     }
@@ -82,6 +74,7 @@ export const HomeHeroContent = styled.div`
     align-items: center;
 
     h1 {
+      margin-bottom: 40px;
       padding: 0;
       width: 100%;
       max-width: 780px;
@@ -89,7 +82,6 @@ export const HomeHeroContent = styled.div`
     }
 
     div {
-      margin-top: 40px;
       width: 100%;
       max-width: 780px;
       text-align: center;
@@ -127,6 +119,10 @@ export const HomeHeroButtons = styled.div`
   button {
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.not_quite_black};
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
   }
 
   @media screen and (min-width: 1024px) {
