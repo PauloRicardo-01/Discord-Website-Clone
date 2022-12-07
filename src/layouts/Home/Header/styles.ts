@@ -13,8 +13,13 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  svg {
-    color: ${(props) => props.theme.colors.white};
+  .logo {
+    padding-top: 2px;
+
+    svg {
+      height: 38px;
+      color: ${(props) => props.theme.colors.white};
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -29,6 +34,7 @@ export const MobileButtonContainer = styled.div`
   gap: 16px;
 
   a {
+    padding: 0 17px;
     color: ${(props) => props.theme.colors.not_quite_black};
     font-family: 'Whitney Light';
     font-weight: 600;
@@ -41,6 +47,10 @@ export const MobileButtonContainer = styled.div`
     display: block;
     background-color: transparent;
     border: none;
+
+    svg {
+      color: ${(props) => props.theme.colors.white};
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -62,7 +72,8 @@ export const DesktopMenu = styled.nav`
     padding: 10px;
     color: ${(props) => props.theme.colors.white};
     font-family: 'Whitney medium';
-    font-weight: 500;
+    font-size: 16px;
+    line-height: 124px;
 
     :hover {
       text-decoration: underline;

@@ -4,12 +4,13 @@ export const HomeHeroContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .relative-foreground-1 {
     width: 100%;
-    max-width: 880px;
+    max-width: 609px;
     height: max-content;
-    margin-left: -80px;
+    margin-left: -150px;
   }
 
   @media screen and (min-width: 768px) {
@@ -24,8 +25,8 @@ export const HomeHeroContainer = styled.div`
 `;
 
 export const HomeHeroContent = styled.div`
-  width: 100%;
   padding: 56px 24px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -90,6 +91,7 @@ export const HomeHeroContent = styled.div`
 `;
 
 export const HomeHeroButtons = styled.div`
+  margin-top: 24px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +108,7 @@ export const HomeHeroButtons = styled.div`
   }
 
   a {
+    width: 90%;
     color: ${(props) => props.theme.colors.not_quite_black};
     background-color: ${(props) => props.theme.colors.white};
 
@@ -119,6 +122,13 @@ export const HomeHeroButtons = styled.div`
   button {
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.not_quite_black};
+  }
+
+  @media screen and (min-width: 365px) {
+    a {
+      width: 100%;
+      max-width: max-content;
+    }
   }
 
   @media screen and (min-width: 768px) {

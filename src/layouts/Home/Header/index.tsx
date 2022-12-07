@@ -78,7 +78,7 @@ export function HomeHeader() {
 
   return (
     <StyledHeader>
-      <Link to='/'>
+      <Link to='/' className='logo'>
         <LogoSvg />
       </Link>
       <DesktopMenu>
